@@ -40,6 +40,10 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         return mDataSet;
     }
 
+    public void setDataSet(List<SearchItemObject> dataSet) {
+        mDataSet = dataSet;
+    }
+
     @Override
     public int getItemCount() {
         return mDataSet.size()+1;//for loading indicator at the end
@@ -106,6 +110,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         mDataSet = dataSet;
         notifyDataSetChanged();
     }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private View mView;

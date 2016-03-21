@@ -135,14 +135,6 @@ public class SearchActivity extends AppCompatActivity implements AdvancedSearchD
         });
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
 
         if (savedInstanceState != null) {
@@ -420,6 +412,7 @@ public class SearchActivity extends AppCompatActivity implements AdvancedSearchD
                     }
                     Log.d(LOG_TAG,"loading most view articles: "+ list.size()+" loaded");
                     mAdapter.swapData(list);
+
                     mRecyclerView.setLayoutManager(mLinearLayoutManager);
                     mPopularTitleTextView.setVisibility(View.VISIBLE);
 

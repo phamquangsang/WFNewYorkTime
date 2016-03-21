@@ -201,7 +201,10 @@ public class SearchActivity extends AppCompatActivity implements AdvancedSearchD
                 Toast.makeText(SearchActivity.this, "submit query!!! : " + query, Toast.LENGTH_SHORT).show();
                 mQueryString = query;
                 mQueryUrl = Utilities.getNewsYourTimeQueryString(query, 0, mBeginYear, mBeginMonth, mBeginDate, mOrder, isArts, isFashion, isSports);
+                mAdapter.getDataSet().clear();
+                mProgressBar.setVisibility(View.VISIBLE);
                 performQuery(mQueryUrl, new ArrayList<SearchItemObject>(), mProgressBar);
+
                 searchView.clearFocus();
                 return true;
             }
@@ -260,7 +263,8 @@ public class SearchActivity extends AppCompatActivity implements AdvancedSearchD
 
             @Override
             public void onStart() {
-                progressBar.setVisibility(View.VISIBLE);
+                if(mAdapter.getDataSet().size()==0)
+                    progressBar.setVisibility(View.VISIBLE);
             }
 
             @Override

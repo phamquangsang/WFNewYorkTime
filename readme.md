@@ -15,7 +15,7 @@ The following **required** functionality is completed:
   * [x] News desk values (Arts, Fashion & Style, Sports)
   * [x] Sort order (oldest or newest)
 * [ ] Subsequent searches have any filters applied to the search results
-* [x] User can tap on any image in results to see the full text of article in embedded [chrome custom tabs]https://developer.chrome.com/multidevice/android/customtabs which is twice time faster than Webview. if chrome is not installed it will sent intent to browser.
+* [x] User can tap on any image in results to see the full text of article in embedded [chrome custom tabs](https://developer.chrome.com/multidevice/android/customtabs) which is twice time faster than Webview. if chrome is not installed it will sent intent to browser.
 * [x] User can **scroll down to see more articles**. The maximum number of articles is limited by the API search. 
 
 The following **optional** features are implemented:
